@@ -177,14 +177,23 @@ section {
 
     header > .container nav li a {
         font-size: 18px;
+        margin-left: 1em;
     }
 
     .container img {
         max-width: 100%;
     }
+
+    .container-flex nav li a,
+    .twu nav li a {
+        max-width: 100%;
+        margin-left: 5em;
+        font-size: 1em;
+    }
     
     h1 {
         font-size: 35px;
+        text-align: center;
     }
 
     nav {
@@ -215,6 +224,7 @@ section {
     font-size: 16px;
     line-height: 2;
     padding: 8px;
+
 }
 }
 
