@@ -69,8 +69,8 @@ section p,
         overflow-x: hidden;
     }
 
-    #sobre {
-        justify-content: center;
+    #sobre img {
+        width: 100%;
     }
     
     #sobre .container,
