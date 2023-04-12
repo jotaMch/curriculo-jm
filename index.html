@@ -1,133 +1,171 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jânderson Machado</title>
-    <link rel="stylesheet" href="main.css">
+    <title>Janderson Machado</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-            <div class="container">
-                <h1>Desenvolvedor Front-end</h1>
-                <div >
-                    <nav>
-                        <ul>
-                            <li>
-                                <a href="#inicio" >Sobre mim</a>
-                            </li>
-                            <li>
-                                <a href="#projetos" >Projetos</a>
-                            </li>
-                            <li>
-                                <a href="#contato" >Contato</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+    <header class="navbar navbar-expand-lg sticky-top p-4" id="cabecalho">
+        <div class="container">
+            <h1 class="navbar-brand text-info">Desenvolvedor Front-end</h1>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-navegacao">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="navbar-collapse collapse justify-content-end" id="menu-navegacao">
+                <ul class="nav nav-pills d-block d-md-flex">
+                    <li class="nav-item fw-bold">
+                        <a href="#sobre" class="nav-link active">
+                            <i class="bi bi-house-door me-1"></i>
+                            Sobre mim
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a href="#projetos" class="nav-link" >
+                            <i class="bi bi-calendar-check me-1"></i>
+                            Projetos
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a href="#contato" class="nav-link">
+                            <i class="bi bi-card-text me-1"></i>
+                            Contato
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <section id="inicio">
+    <div data-bs-spy="scroll" data-bs-target="cabecalho" data-bs-smoot-scroll="true">
+        <section id="sobre">
             <div class="container">
-                <img class="photo-p" src="./img/perfil-original.jpg" alt="photo perfil" />
-                <div class="sobre">
+                <div class="row justify-content-md-between">
+                    <div class="img col-md-5 col-lg-4 pt-md-5 pb-md-5">
+                        <img src="./img/perfil-original.jpg" class="d-block w-100" alt="photo perfil" />
+                    </div>
+                <div class="col-md-7 pt-5 mt-md- w-md-50 ">
                     <h2>Jânderson Machado</h2>
-                    <p>                    
-                        Sou estudante da EBAC-Escola Britânica de Artes Criativas e Tecnologia, venho estudando e me aprofundando em desenvolvimento front-end pois admiro as linguagens HTML, CSS, JAVASCRIPT entre outros (JQuery,Bootstrap) e frameworks . tenho 22 anos e pretendo seguir essa carreira de desenvolvedor com dedicação, esforço e eficiencia. Tenho disponibilidade de horário e posso trabalhar de forma hibrida.
+                    <p class="fw-bold text-sm-1">
+                        Sou estudante da EBAC-Escola Britânica de Artes Criativas e Tecnologia, venho estudando e me aprofundando em desenvolvimento front-end pois admiro as linguagens HTML, CSS, JAVASCRIPT entre outros frameworks. tenho 22 anos e pretendo seguir essa carreira de programador com dedicação, esforço e eficiencia. Tenho disponibilidade de horário e posso trabalhar de forma hibrida.
                     </p>
                     <div>
                         <nav>
-                            <ul>
-                                <li>
-                                    <a href="https://www.linkedin.com/in/j%C3%A2nderson-machado-082b54259/">Linkedin</a>
+                            <ul class="nav nav-pills">
+                                <li class="nav-item" id="primary">
+                                    <a href="https://www.linkedin.com/in/j%C3%A2nderson-machado-082b54259/" class="btn btn-outline-secondary btn-sm">Linkedin</a>
                                 </li>
-                                <li>
-                                    <a href="https://github.com/">Github</a>
+                                <li class="nav-item">
+                                    <a href="https://github.com/" class="btn btn-outline-secondary btn-sm">Github</a>
                                 </li>
                             </ul>
                         </nav>
                     </div>
                 </div>
+                </div>
             </div>
     </section>
-    <section id="projetos">
-            <div class="container-flex">
-                <div class="border">
-                    <h2>Projetos</h2>
-                    <nav class="pro">
-                        <ul>
-                            <li>
-                                <img src="./img/one-project - Copia.png" alt="game shop" />
-                                <a href="https://site-gamesshop-puce-omega.vercel.app/">Loja games shop</a>
-                                <p>HTML e CSS</p>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <img src="./img/tree-project.png" alt="loja" />
-                                <a href="https://exercicio-modulo-5.vercel.app/">Loja do flamengo</a>
-                            <p>HTML e CSS</p>
-                            </li>
-                        </ul>
+    <section id="projetos" class="pb-5">
+        <div class="row">
+            <h2 class="section-title navbar-brand text-center pt-4 pb-5 fs-3">
+                <span class="text-info">Projetos</span>
+            </h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <aside class="col-md-2">
+                    <nav class="nav nav-pills flex-column nav-project">
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#recentes" class="fw-bold text-start nav-link text-color active">Projetos recentes</button>
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#jquery" class="fw-bold text-start nav-link text-color">Projetos JQuery/Mask</button>
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#javascript" class="fw-bold text-start nav-link text-color">Projetos JavaScript</button>
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#html-css" class="fw-bold text-start nav-link text-color">Projetos HTMl/CSS</button>
                     </nav>
-                    <nav class="pro">    
-                        <ul>
-                            <li>
-                                <img src="./img/twu-project.png" alt="agenda" />
-                                <a href="https://agenda-de-contatos-mauve.vercel.app/">Agenda de contatos</a>
-                            <p>HTML, CSS e JavaScript</p>
-                            </li>
-                        </ul>                        
-                        <ul>
-                            <li>
-                                <img src="./img/TenisShop.png" alt="Loja de Tênis" />
-                                <a href="https://curso-ebac-frontend-nine.vercel.app/">Tênis Shop</a>
-                            <p>CSS Responsivo</p>
-                            </li>
-                        </ul>
-                    </nav>
-                    <nav>    
-                        <ul>
-                            <li>
-                                <img src="./img/galeria.png" alt="galeria" />
-                                <a href="https://jm-jquery-galeria-fotos.vercel.app/">Galeria de fotos</a>
-                            <p>HTML, CSS JS/JQuery</p>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <img src="./img/form.png" alt="formulario" />
-                                <a href="https://projeto-formulario-one.vercel.app/">Formulário (JQuery)</a>
-                            <p>JS/Jquery e PluginMask</p>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <img src="./img/Bootstrap.png" alt="Bootstrap" />
-                                <a href="https://bootstrap-responsivo-sigma.vercel.app/">Bootstrap</a>
-                            <p>Bootstrap/Carousel Responsivo</p>
-                            </li>
-                        </ul>
-                    </nav>
-                </div> 
-            </div>    
+                </aside>
+                <div class="col-md-10">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="recentes">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img src="./img/restaurante.json" class="d-block w-100 rounded" alt="Restaurante" />
+                                    <a href="https://curso-ebac-frontend-nine.vercel.app/" ><h5 class="text-color fw-bold mt-2">Restaurante</h5></a>
+                                    <p>linguagens: HTML, CSS, Bootatrap e JQuery/JavaScript</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img src="./img/restaurante.json" class="d-block w-100 rounded" alt="Restaurante" />
+                                    <a href="https://curso-ebac-frontend-nine.vercel.app/" ><h5 class="text-color fw-bold mt-2">Restaurante</h5></a>
+                                    <p>linguagens: HTML, CSS, Bootatrap e JQuery/JavaScript</p>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="tab-pane" id="jquery">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img src="./img/galeriap.json" class="d-block w-100 rounded" alt="Galeria de fotos" />
+                                    <a href="https://jm-jquery-galeria-fotos.vercel.app/" ><h5 class="text-color fw-bold mt-2">Galeria de fotos</h5></a>
+                                    <p>linguagens: HTML, CSS, JQuery/JavaScript</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img src="./img/formulário.json" class="d-block w-100 rounded" alt="Formulario" />
+                                    <a href="https://projeto-formulario-one.vercel.app/" ><h5 class="text-color fw-bold mt-2">Formulario</h5></a>
+                                    <p>linguagens: HTML, CSS e JQuery/PluginMask</p>
+                                </div>
+                            </div>
+                        </div>    
+                        <div class="tab-pane" id="javascript">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img src="./img/galeriap.json" class="d-block w-100 rounded" alt="Galeria de fotos" />
+                                    <a href="https://jm-jquery-galeria-fotos.vercel.app/" ><h5 class="text-color fw-bold mt-2">Galeria de fotos</h5></a>
+                                    <p>linguagens: HTML, CSS, JQuery/JavaScript</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img src="./img/formulário.json" class="d-block w-100 rounded" alt="Formulario" />
+                                    <a href="https://projeto-formulario-one.vercel.app/" ><h5 class="text-color fw-bold mt-2">Formulario</h5></a>
+                                    <p>linguagens: HTML, CSS e JQuery/PluginMask</p>
+                                </div>
+                            </div>
+                        </div>    
+                        <div class="tab-pane" id="html-css">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img src="./img/galeriap.json" class="d-block w-100 rounded" alt="Galeria de fotos" />
+                                    <a href="https://jm-jquery-galeria-fotos.vercel.app/" ><h5 class="text-color fw-bold mt-2">Galeria de fotos</h5></a>
+                                    <p>linguagens: HTML, CSS, JQuery/JavaScript</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img src="./img/formulário.json" class="d-block w-100 rounded" alt="Formulario" />
+                                    <a href="https://projeto-formulario-one.vercel.app/" ><h5 class="text-color fw-bold mt-2">Formulario</h5></a>
+                                    <p>linguagens: HTML, CSS e JQuery/PluginMask</p>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
     </section>
     <section id="contato">
-            <div class="contatos">
-            <h2>Informações de contato</h2>
-                <h4>
-                    Numero de contato:
-                </h4>
-                    <p>
+        <div class="container pt-5 pb-5">
+            <div class="row text-center rounded p-4 ">
+                <h3 class="section-title navbar-brand fs-5 pb-4">
+                    <span class="text-info">Informações de contato</span>
+                </h3>    
+                <h3 class="navbar-brand text-info">
+                    <span class="fw-bold">Numero de contato:</span>
+                </h3>
+                    <p class="fw-bold">
                         (21) 965063664
                     </p>
-                <h4>Cidade:</h4>
-                    <p>Rio de Janeiro-RJ</p>
-                <h4>Endereço de e-mail</h4>
-                    <p>jandersonmachado090@gmail.com</p>
+                <h3 class="navbar-brand text-info">Cidade:</h3>
+                <p class="fw-bold">Rio de Janeiro - RJ/Curicíca</p>
+                <h3 class="navbar-brand text-info">Endereço de e-mail</h3>
+                    <p class="fw-bold">jandersonmachado090@gmail.com</p>
             </div>
+        </div>    
     </section>
+    </div>
+    <script src="lib/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
