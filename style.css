@@ -68,10 +68,6 @@ section p,
     html, body {
         overflow-x: hidden;
     }
-
-    #sobre img {
-        width: 100%;
-    }
     
     #sobre .container,
     #projetos .container {
