@@ -1,3 +1,7 @@
+html, body {
+    overflow-x: hidden;
+}
+
 section,
 header {
     background-color: #3f3f3f;
