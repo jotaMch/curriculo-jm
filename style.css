@@ -4,7 +4,7 @@ html, body {
 
 section,
 header {
-    background-color: #3f3f3f;
+    background-color: rgb(146, 146, 137);
 }
 
 #primary {
@@ -19,12 +19,23 @@ header {
     color: #b1b1b1;
 }
 
-p {
-    max-width: 600px;
-    line-height: 2;
+#cabecalho .nav .nav-link.active{
+    background-color: #484747;
 }
 
-.row.justify-content-between {
+#cabecalho .nav .nav-link,
+.navbar-brand,
+.navbar-brand:hover,
+.nav-cardapio .nav-link.active:hover {
+    color: #d9d6d6;
+}
+
+#sobre p {
+    max-width: 600px;
+    line-height: 3;
+}
+
+.row.justify-content-center {
     padding: 7em 0;
 }
 
@@ -34,8 +45,18 @@ p {
     margin: 0 auto;
 }
 
+.wd {
+    width: 125px;
+    height: 125px;
+    margin-left: 100px;
+}
+
+.wd:hover {
+    box-shadow: 0 0 10px 5px #b1b1b1;
+}
+
 .img img {
-    max-width: 380px;
+    max-width: 300px;
     border-radius: 100%;
     filter: brightness(75%);
 }
@@ -52,8 +73,6 @@ p {
     list-style: none;
 }
 
-section h2,
-section p,
 .nav-project .nav-link.active:hover {
     color: #b1b1b1 ;
 }
